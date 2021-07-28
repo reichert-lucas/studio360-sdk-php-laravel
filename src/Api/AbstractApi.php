@@ -4,12 +4,12 @@ namespace Jetimob\Studio360\Api;
 
 use Jetimob\Http\AbstractApi as HttpAbstractApi;
 use Jetimob\Http\Request;
-use Jetimob\Studio360\Exceptions\Studio360Exception;
+use Jetimob\Studio360\Exceptions\Studio360RequestException;
 use Jetimob\Studio360\Studio360;
 
 abstract class AbstractApi extends HttpAbstractApi
 {
-    protected ?string $exceptionClass = Studio360Exception::class;
+    protected ?string $exceptionClass = Studio360RequestException::class;
 
     /**
      * AbstractApi constructor.

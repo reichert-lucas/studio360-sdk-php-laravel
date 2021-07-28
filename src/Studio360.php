@@ -4,6 +4,7 @@ namespace Jetimob\Studio360;
 
 use Jetimob\Http\Contracts\HttpProviderContract;
 use Jetimob\Http\Http;
+use Jetimob\Studio360\Api\Buildings\BuildingsApi;
 
 class Studio360 implements HttpProviderContract
 {
@@ -35,5 +36,10 @@ class Studio360 implements HttpProviderContract
     public function getHttpInstance(): Http
     {
         return $this->client;
+    }
+
+    public function buildings(): BuildingsApi
+    {
+        return new BuildingsApi($this);
     }
 }

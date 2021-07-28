@@ -1,0 +1,57 @@
+{
+    "name": "medina/studio360-sdk-php-laravel",
+    "description": "Laravel SDK for Studio360's API",
+    "keywords": ["sdk", "laravel", "php", "studio360"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandre Medina",
+            "email": "ammedina@inf.ufsm.br",
+            "role": "Developer"
+        },
+        {
+            "name": "Jetimob",
+            "email": "contato@jetimob.com",
+            "homepage": "https://jetimob.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/jetimob/studio360-sdk-php-laravel/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jetimob\\Studio360\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jetimob\\Studio360\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jetimob\\Studio360\\Studio360ServiceProvider"
+            ],
+            "aliases": {
+                "Studio360": "Jetimob\\Studio360\\Facades\\Studio360"
+            }
+        }
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/console": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/container": "^6.0 || ^7.0 || ^8.0",
+        "jetimob/http-php-laravel": "^1.3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.2",
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

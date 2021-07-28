@@ -10,7 +10,7 @@ class PropertyData
 
     protected int $id;
     protected string $title;
-    protected string $description;
+    protected ?string $description = null;
     protected string $status;
     protected string $deleted;
     protected string $address_display_type;
@@ -41,9 +41,9 @@ class PropertyData
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -217,7 +217,7 @@ class PropertyData
     public static function new(
         int $id,
         string $title,
-        string $description,
+        ?string $description,
         string $status,
         string $deleted,
         string $address_display_type,

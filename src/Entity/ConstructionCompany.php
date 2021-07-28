@@ -10,7 +10,7 @@ class ConstructionCompany
 
     protected string $title;
     protected string $whatsapp;
-    protected string $instagram;
+    protected ?string $instagram = null;
     protected array $business_contacts;
     protected Logo $logo;
 
@@ -58,19 +58,19 @@ class ConstructionCompany
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getInstagram(): string
+    public function getInstagram(): ?string
     {
         return $this->instagram;
     }
 
     /**
-     * @param string $instagram
+     * @param string|null $instagram
      *
      * @return ConstructionCompany
      */
-    public function setInstagram(string $instagram): ConstructionCompany
+    public function setInstagram(?string $instagram): ConstructionCompany
     {
         $this->instagram = $instagram;
         return $this;
@@ -117,7 +117,7 @@ class ConstructionCompany
     public static function new(
         string $title,
         string $whatsapp,
-        string $instagram,
+        ?string $instagram,
         array $business_contacts,
         Logo $logo
     )

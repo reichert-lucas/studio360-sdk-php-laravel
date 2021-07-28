@@ -11,7 +11,7 @@ class Address
     protected string $street_name;
     protected string $street_number;
     protected string $neighborhood;
-    protected string $complement;
+    protected ?string $complement = null;
     protected string $zip_code;
     protected string $city;
     protected string $state;
@@ -77,19 +77,19 @@ class Address
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getComplement(): string
+    public function getComplement(): ?string
     {
         return $this->complement;
     }
 
     /**
-     * @param string $complement
+     * @param string|null $complement
      *
      * @return Address
      */
-    public function setComplement(string $complement): Address
+    public function setComplement(?string $complement): Address
     {
         $this->complement = $complement;
         return $this;
@@ -213,7 +213,7 @@ class Address
         string $street_name,
         string $street_number,
         string $neighborhood,
-        string $complement,
+        ?string $complement,
         string $zip_code,
         string $city,
         string $state,
