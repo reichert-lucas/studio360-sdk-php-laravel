@@ -10,7 +10,7 @@ class Address
 
     protected string $street_name;
     protected string $street_number;
-    protected string $neighborhood;
+    protected ?string $neighborhood;
     protected ?string $complement = null;
     protected string $zip_code;
     protected string $city;
@@ -58,19 +58,19 @@ class Address
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getNeighborhood(): string
+    public function getNeighborhood(): ?string
     {
         return $this->neighborhood;
     }
 
     /**
-     * @param string $neighborhood
+     * @param string|null $neighborhood
      *
      * @return Address
      */
-    public function setNeighborhood(string $neighborhood): Address
+    public function setNeighborhood(?string $neighborhood): Address
     {
         $this->neighborhood = $neighborhood;
         return $this;
@@ -212,7 +212,7 @@ class Address
     public function new(
         string $street_name,
         string $street_number,
-        string $neighborhood,
+        ?string $neighborhood,
         ?string $complement,
         string $zip_code,
         string $city,

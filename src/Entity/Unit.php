@@ -9,11 +9,11 @@ class Unit
     use Serializable;
 
     protected int $id;
-    protected string $title;
+    protected ?string $title = null;
     protected string $price;
-    protected int $parking_spaces;
-    protected int $dorms;
-    protected int $suites;
+    protected ?int $parking_spaces = null;
+    protected ?int $dorms;
+    protected ?int $suites;
     protected string $private_area;
     protected string $total_area;
 
@@ -26,9 +26,9 @@ class Unit
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -42,25 +42,25 @@ class Unit
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getParkingSpaces(): int
+    public function getParkingSpaces(): ?int
     {
         return $this->parking_spaces;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getDorms(): int
+    public function getDorms(): ?int
     {
         return $this->dorms;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getSuites(): int
+    public function getSuites(): ?int
     {
         return $this->suites;
     }
@@ -93,11 +93,11 @@ class Unit
     }
 
     /**
-     * @param string $title
+     * @param string|null $title
      *
      * @return Unit
      */
-    public function setTitle(string $title): Unit
+    public function setTitle(?string $title): Unit
     {
         $this->title = $title;
         return $this;
@@ -115,33 +115,33 @@ class Unit
     }
 
     /**
-     * @param int $parking_spaces
+     * @param int|null $parking_spaces
      *
      * @return Unit
      */
-    public function setParkingSpaces(int $parking_spaces): Unit
+    public function setParkingSpaces(?int $parking_spaces): Unit
     {
         $this->parking_spaces = $parking_spaces;
         return $this;
     }
 
     /**
-     * @param int $dorms
+     * @param int|null $dorms
      *
      * @return Unit
      */
-    public function setDorms(int $dorms): Unit
+    public function setDorms(?int $dorms): Unit
     {
         $this->dorms = $dorms;
         return $this;
     }
 
     /**
-     * @param int $suites
+     * @param int|null $suites
      *
      * @return Unit
      */
-    public function setSuites(int $suites): Unit
+    public function setSuites(?int $suites): Unit
     {
         $this->suites = $suites;
         return $this;
