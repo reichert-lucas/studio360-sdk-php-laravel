@@ -1,5 +1,5 @@
 {
-    "name": "medina/studio360-sdk-php-laravel",
+    "name": "jetimob/studio360-sdk-php-laravel",
     "description": "Laravel SDK for Studio360's API",
     "keywords": ["sdk", "laravel", "php", "studio360"],
     "type": "library",
