@@ -11,9 +11,12 @@ class Unit
     protected int $id;
     protected ?string $title = null;
     protected string $price;
-    protected ?int $parking_spaces = null;
+    protected ?int $bathroom;
+    protected string $type;
     protected ?int $dorms;
     protected ?int $suites;
+    protected ?int $parking_spaces = null;
+    protected string $util_area;
     protected string $private_area;
     protected string $total_area;
 
@@ -166,6 +169,63 @@ class Unit
     public function setTotalArea(string $total_area): Unit
     {
         $this->total_area = $total_area;
+        return $this;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getBathroom(): ?int
+    {
+        return $this->bathroom;
+    }
+
+    /**
+     * @param int|null $bathroom
+     *
+     * @return Unit
+     */
+    public function setBathroom(?int $bathroom): Unit
+    {
+        $this->bathroom = $bathroom;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType(): string
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     *
+     * @return Unit
+     */
+    public function setType(string $type): Unit
+    {
+        $this->type = $type;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUtilArea(): string
+    {
+        return $this->util_area;
+    }
+
+    /**
+     * @param string $util_area
+     *
+     * @return Unit
+     */
+    public function setUtilArea(string $util_area): Unit
+    {
+        $this->util_area = $util_area;
         return $this;
     }
 }
