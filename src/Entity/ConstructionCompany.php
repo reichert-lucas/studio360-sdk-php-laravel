@@ -12,6 +12,7 @@ class ConstructionCompany
     protected string $whatsapp;
     protected ?string $instagram = null;
     protected array $business_contacts;
+    protected ?string $description;
     protected Logo $logo;
 
     public function business_contactsItemType(): string
@@ -114,10 +115,32 @@ class ConstructionCompany
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string|null $description
+     *
+     * @return ConstructionCompany
+     */
+    public function setDescription(?string $description): ConstructionCompany
+    {
+        $this->description = $description;
+        return $this;
+    }
+
+
+
     public static function new(
         string $title,
         string $whatsapp,
         ?string $instagram,
+        ?string $description,
         array $business_contacts,
         Logo $logo
     )
@@ -126,6 +149,7 @@ class ConstructionCompany
             ->setTitle($title)
             ->setWhatsapp($whatsapp)
             ->setInstagram($instagram)
+            ->setDescription($description)
             ->setBusinessContacts($business_contacts)
             ->setLogo($logo);
     }
