@@ -9,12 +9,9 @@ class Features
     use Serializable;
 
     protected string $type;
-    protected array $tags;
 
-    public function tagsItemType(): string
-    {
-        return 'string';
-    }
+    /** @var string[]|array $tags */
+    protected array $tags;
 
     /**
      * @return string
