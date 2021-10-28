@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v1.1.0...v1.1.1) (2021-10-28)
+
+
+### Bug Fixes
+
+* change pagination parameter from json to query ([bbe1675](https://github.com/jetimob/studio360-sdk-php-laravel/commit/bbe1675c313de8080aad9a27d870e61eebe6e2de))
+
 ## [1.1.0](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v1.0.0...v1.1.0) (2021-10-22)
 
 
