@@ -10,7 +10,7 @@ class BuildingsApi extends AbstractApi
     public function list(int $page = 1): BuildingsResponse
     {
         return $this->mappedGet('empreendimentos', BuildingsResponse::class, [
-            RequestOptions::JSON => ['page' => $page],
+            RequestOptions::QUERY => ['page' => $page],
         ]);
     }
 
