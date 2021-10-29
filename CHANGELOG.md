@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v1.1.1...v1.2.0) (2021-10-29)
+
+
+### Features
+
+* add type, rent and enterprise_status at the `Building` Model ([e639928](https://github.com/jetimob/studio360-sdk-php-laravel/commit/e6399286a892c459a68d55c0f25e53292abd17bf))
+
 ### [1.1.1](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v1.1.0...v1.1.1) (2021-10-28)
 
 
