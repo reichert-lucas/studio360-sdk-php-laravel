@@ -10,6 +10,9 @@ class Building
 
     protected int $id;
     protected string $title;
+    protected string $type;
+    protected int $enterprise_status;
+    protected bool $rent;
     protected array $gallery;
     protected array $video;
     protected array $tour_360;
@@ -201,6 +204,63 @@ class Building
     public function setFeatures(Features $features): Building
     {
         $this->features = $features;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType(): string
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     *
+     * @return Building
+     */
+    public function setType(string $type): Building
+    {
+        $this->type = $type;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getEnterpriseStatus(): int
+    {
+        return $this->enterprise_status;
+    }
+
+    /**
+     * @param int $enterprise_status
+     *
+     * @return Building
+     */
+    public function setEnterpriseStatus(int $enterprise_status): Building
+    {
+        $this->enterprise_status = $enterprise_status;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isRent(): bool
+    {
+        return $this->rent;
+    }
+
+    /**
+     * @param bool $rent
+     *
+     * @return Building
+     */
+    public function setRent(bool $rent): Building
+    {
+        $this->rent = $rent;
         return $this;
     }
 }
