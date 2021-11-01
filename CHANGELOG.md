@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v1.1.1...v2.0.0) (2021-11-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename `PropertyData` to `EnterpriseData`
+
+### Features
+
+* add type, rent and enterprise_status at the `Building` Model ([e639928](https://github.com/jetimob/studio360-sdk-php-laravel/commit/e6399286a892c459a68d55c0f25e53292abd17bf))
+* rename `PropertyData` to `EnterpriseData` ([cc83aee](https://github.com/jetimob/studio360-sdk-php-laravel/commit/cc83aee3f08cb2677e4ddc67a039ae0771319892))
+
 ### [1.1.1](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v1.1.0...v1.1.1) (2021-10-28)
 
 
