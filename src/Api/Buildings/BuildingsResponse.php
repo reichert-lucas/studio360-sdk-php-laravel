@@ -3,7 +3,7 @@
 namespace Jetimob\Studio360\Api\Buildings;
 
 use Jetimob\Studio360\Api\Studio360Response;
-use Jetimob\Studio360\Entity\PropertyData;
+use Jetimob\Studio360\Entity\EnterpriseData;
 
 class BuildingsResponse extends Studio360Response
 {
@@ -15,7 +15,7 @@ class BuildingsResponse extends Studio360Response
 
     public function dataItemType(): string
     {
-        return PropertyData::class;
+        return EnterpriseData::class;
     }
 
     /**

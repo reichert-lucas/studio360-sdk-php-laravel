@@ -4,7 +4,7 @@ namespace Jetimob\Studio360\Entity;
 
 use Jetimob\Http\Traits\Serializable;
 
-class PropertyData
+class EnterpriseData
 {
     use Serializable;
 
@@ -107,9 +107,9 @@ class PropertyData
     /**
      * @param int $id
      *
-     * @return PropertyData
+     * @return EnterpriseData
      */
-    public function setId(int $id): PropertyData
+    public function setId(int $id): EnterpriseData
     {
         $this->id = $id;
         return $this;
@@ -118,9 +118,9 @@ class PropertyData
     /**
      * @param string $title
      *
-     * @return PropertyData
+     * @return EnterpriseData
      */
-    public function setTitle(string $title): PropertyData
+    public function setTitle(string $title): EnterpriseData
     {
         $this->title = $title;
         return $this;
@@ -129,9 +129,9 @@ class PropertyData
     /**
      * @param string $description
      *
-     * @return PropertyData
+     * @return EnterpriseData
      */
-    public function setDescription(string $description): PropertyData
+    public function setDescription(string $description): EnterpriseData
     {
         $this->description = $description;
         return $this;
@@ -140,9 +140,9 @@ class PropertyData
     /**
      * @param string $status
      *
-     * @return PropertyData
+     * @return EnterpriseData
      */
-    public function setStatus(string $status): PropertyData
+    public function setStatus(string $status): EnterpriseData
     {
         $this->status = $status;
         return $this;
@@ -151,9 +151,9 @@ class PropertyData
     /**
      * @param string $deleted
      *
-     * @return PropertyData
+     * @return EnterpriseData
      */
-    public function setDeleted(string $deleted): PropertyData
+    public function setDeleted(string $deleted): EnterpriseData
     {
         $this->deleted = $deleted;
         return $this;
@@ -162,9 +162,9 @@ class PropertyData
     /**
      * @param string $address_display_type
      *
-     * @return PropertyData
+     * @return EnterpriseData
      */
-    public function setAddressDisplayType(string $address_display_type): PropertyData
+    public function setAddressDisplayType(string $address_display_type): EnterpriseData
     {
         $this->address_display_type = $address_display_type;
         return $this;
@@ -173,9 +173,9 @@ class PropertyData
     /**
      * @param array $unit
      *
-     * @return PropertyData
+     * @return EnterpriseData
      */
-    public function setUnit(array $unit): PropertyData
+    public function setUnit(array $unit): EnterpriseData
     {
         $this->unit = $unit;
         return $this;
@@ -184,9 +184,9 @@ class PropertyData
     /**
      * @param Building $building
      *
-     * @return PropertyData
+     * @return EnterpriseData
      */
-    public function setBuilding(Building $building): PropertyData
+    public function setBuilding(Building $building): EnterpriseData
     {
         $this->building = $building;
         return $this;
@@ -195,9 +195,9 @@ class PropertyData
     /**
      * @param ConstructionCompany $construction_company
      *
-     * @return PropertyData
+     * @return EnterpriseData
      */
-    public function setConstructionCompany(ConstructionCompany $construction_company): PropertyData
+    public function setConstructionCompany(ConstructionCompany $construction_company): EnterpriseData
     {
         $this->construction_company = $construction_company;
         return $this;
@@ -206,9 +206,9 @@ class PropertyData
     /**
      * @param string $last_updated_at
      *
-     * @return PropertyData
+     * @return EnterpriseData
      */
-    public function setLastUpdatedAt(string $last_updated_at): PropertyData
+    public function setLastUpdatedAt(string $last_updated_at): EnterpriseData
     {
         $this->last_updated_at = $last_updated_at;
         return $this;

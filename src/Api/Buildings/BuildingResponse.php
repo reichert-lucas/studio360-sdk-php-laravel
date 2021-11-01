@@ -3,16 +3,16 @@
 namespace Jetimob\Studio360\Api\Buildings;
 
 use Jetimob\Studio360\Api\Studio360Response;
-use Jetimob\Studio360\Entity\PropertyData;
+use Jetimob\Studio360\Entity\EnterpriseData;
 
 class BuildingResponse extends Studio360Response
 {
-    protected ?PropertyData $data;
+    protected ?EnterpriseData $data;
 
     /**
-     * @return PropertyData|null
+     * @return EnterpriseData|null
      */
-    public function getData(): ?PropertyData
+    public function getData(): ?EnterpriseData
     {
         return $this->data ?? null;
     }
