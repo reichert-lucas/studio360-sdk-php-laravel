@@ -10,12 +10,14 @@ class Building
 
     protected int $id;
     protected string $title;
+    protected ?string $incorporation_registration;
     protected string $type;
     protected int $enterprise_status;
     protected bool $rent;
     protected array $gallery;
     protected array $video;
     protected array $tour_360;
+    protected ?string $rental_value;
     protected Address $address;
     protected string $text_address;
     protected array $cover;
@@ -262,5 +264,21 @@ class Building
     {
         $this->rent = $rent;
         return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getIncorporationRegistration(): ?string
+    {
+        return $this->incorporation_registration;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getRentalValue(): ?string
+    {
+        return $this->rental_value;
     }
 }
