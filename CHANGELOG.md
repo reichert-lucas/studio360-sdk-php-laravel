@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v2.0.1...v2.1.0) (2021-12-07)
+
+
+### Features
+
+* add rental_value and incorporation_registration in `Building` ([a45146d](https://github.com/jetimob/studio360-sdk-php-laravel/commit/a45146dd7c9fcc7760dcfe22fa755df56639fd4e))
+
 ### [2.0.1](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v2.0.0...v2.0.1) (2021-12-01)
 
 ## [2.0.0](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v1.1.1...v2.0.0) (2021-11-01)
