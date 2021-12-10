@@ -19,6 +19,15 @@ class Unit
     protected string $util_area;
     protected string $private_area;
     protected string $total_area;
+    protected ?string $rental_value = null;
+
+    /**
+     * @return string|null
+     */
+    public function getRentalValue(): ?string
+    {
+        return $this->rental_value;
+    }
 
     /**
      * @return int
