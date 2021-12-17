@@ -19,6 +19,7 @@ class Unit
     protected string $util_area;
     protected string $private_area;
     protected string $total_area;
+    protected string $ground_area;
     protected ?string $rental_value = null;
 
     /**
@@ -27,6 +28,14 @@ class Unit
     public function getRentalValue(): ?string
     {
         return $this->rental_value;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGroundArea(): string
+    {
+        return $this->ground_area;
     }
 
     /**
