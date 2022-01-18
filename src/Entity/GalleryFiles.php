@@ -8,28 +8,28 @@ class GalleryFiles
 {
     use Serializable;
 
-    protected string $url;
+    protected ?string $url;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->url;
     }
 
     /**
-     * @param string $url
+     * @param string|null $url
      *
      * @return GalleryFiles
      */
-    public function setUrl(string $url): GalleryFiles
+    public function setUrl(?string $url): GalleryFiles
     {
         $this->url = $url;
         return $this;
     }
 
-    public static function new(string $url): self
+    public static function new(?string $url): self
     {
         return (new static())
             ->setUrl($url);

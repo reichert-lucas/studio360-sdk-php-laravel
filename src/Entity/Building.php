@@ -9,18 +9,18 @@ class Building
     use Serializable;
 
     protected int $id;
-    protected string $title;
+    protected ?string $title;
     protected ?string $incorporation_registration;
-    protected string $type;
-    protected int $enterprise_status;
-    protected bool $rent;
-    protected array $gallery;
-    protected array $video;
-    protected array $tour_360;
+    protected ?string $type;
+    protected ?int $enterprise_status;
+    protected ?bool $rent;
+    protected ?array $gallery;
+    protected ?array $video;
+    protected ?array $tour_360;
     protected ?string $rental_value;
     protected Address $address;
-    protected string $text_address;
-    protected array $cover;
+    protected ?string $text_address;
+    protected ?array $cover;
     protected Features $features;
 
     public function galleryItemType(): string
@@ -58,76 +58,76 @@ class Building
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
     /**
-     * @param string $title
+     * @param string|null $title
      *
      * @return Building
      */
-    public function setTitle(string $title): Building
+    public function setTitle(?string $title): Building
     {
         $this->title = $title;
         return $this;
     }
 
     /**
-     * @return array
+     * @return array|null
      */
-    public function getGallery(): array
+    public function getGallery(): ?array
     {
         return $this->gallery;
     }
 
     /**
-     * @param array $gallery
+     * @param array|null $gallery
      *
      * @return Building
      */
-    public function setGallery(array $gallery): Building
+    public function setGallery(?array $gallery): Building
     {
         $this->gallery = $gallery;
         return $this;
     }
 
     /**
-     * @return array
+     * @return array|null
      */
-    public function getVideo(): array
+    public function getVideo(): ?array
     {
         return $this->video;
     }
 
     /**
-     * @param array $video
+     * @param array|null $video
      *
      * @return Building
      */
-    public function setVideo(array $video): Building
+    public function setVideo(?array $video): Building
     {
         $this->video = $video;
         return $this;
     }
 
     /**
-     * @return array
+     * @return array|null
      */
-    public function getTour360(): array
+    public function getTour360(): ?array
     {
         return $this->tour_360;
     }
 
     /**
-     * @param array $tour_360
+     * @param array|null $tour_360
      *
      * @return Building
      */
-    public function setTour360(array $tour_360): Building
+    public function setTour360(?array $tour_360): Building
     {
         $this->tour_360 = $tour_360;
         return $this;
@@ -153,38 +153,38 @@ class Building
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTextAddress(): string
+    public function getTextAddress(): ?string
     {
         return $this->text_address;
     }
 
     /**
-     * @param string $text_address
+     * @param string|null $text_address
      *
      * @return Building
      */
-    public function setTextAddress(string $text_address): Building
+    public function setTextAddress(?string $text_address): Building
     {
         $this->text_address = $text_address;
         return $this;
     }
 
     /**
-     * @return array
+     * @return array|null
      */
-    public function getCover(): array
+    public function getCover(): ?array
     {
         return $this->cover;
     }
 
     /**
-     * @param array $cover
+     * @param array|null $cover
      *
      * @return Building
      */
-    public function setCover(array $cover): Building
+    public function setCover(?array $cover): Building
     {
         $this->cover = $cover;
         return $this;
@@ -210,57 +210,57 @@ class Building
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
 
     /**
-     * @param string $type
+     * @param string|null $type
      *
      * @return Building
      */
-    public function setType(string $type): Building
+    public function setType(?string $type): Building
     {
         $this->type = $type;
         return $this;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getEnterpriseStatus(): int
+    public function getEnterpriseStatus(): ?int
     {
         return $this->enterprise_status;
     }
 
     /**
-     * @param int $enterprise_status
+     * @param int|null $enterprise_status
      *
      * @return Building
      */
-    public function setEnterpriseStatus(int $enterprise_status): Building
+    public function setEnterpriseStatus(?int $enterprise_status): Building
     {
         $this->enterprise_status = $enterprise_status;
         return $this;
     }
 
     /**
-     * @return bool
+     * @return bool|null
      */
-    public function isRent(): bool
+    public function isRent(): ?bool
     {
         return $this->rent;
     }
 
     /**
-     * @param bool $rent
+     * @param bool|null $rent
      *
      * @return Building
      */
-    public function setRent(bool $rent): Building
+    public function setRent(?bool $rent): Building
     {
         $this->rent = $rent;
         return $this;

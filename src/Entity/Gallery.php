@@ -8,8 +8,8 @@ class Gallery
 {
     use Serializable;
 
-    protected string $title;
-    protected array $files;
+    protected ?string $title;
+    protected ?array $files;
 
     public function filesItemType(): string
     {
@@ -17,44 +17,44 @@ class Gallery
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
     /**
-     * @return array
+     * @return array|null
      */
-    public function getFiles(): array
+    public function getFiles(): ?array
     {
         return $this->files;
     }
 
     /**
-     * @param string $title
+     * @param string|null $title
      *
      * @return Gallery
      */
-    public function setTitle(string $title): Gallery
+    public function setTitle(?string $title): Gallery
     {
         $this->title = $title;
         return $this;
     }
 
     /**
-     * @param array $files
+     * @param array|null $files
      *
      * @return Gallery
      */
-    public function setFiles(array $files): Gallery
+    public function setFiles(?array $files): Gallery
     {
         $this->files = $files;
         return $this;
     }
 
-    public static function new(string $title, array $files): self
+    public static function new(?string $title, ?array $files): self
     {
         return (new static())
             ->setTitle($title)

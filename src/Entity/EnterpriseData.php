@@ -9,15 +9,15 @@ class EnterpriseData
     use Serializable;
 
     protected int $id;
-    protected string $title;
+    protected ?string $title;
     protected ?string $description = null;
-    protected string $status;
-    protected string $deleted;
-    protected string $address_display_type;
-    protected array $unit;
+    protected ?string $status;
+    protected ?string $deleted;
+    protected ?string $address_display_type;
+    protected ?array $unit;
     protected Building $building;
     protected ConstructionCompany $construction_company;
-    protected string $last_updated_at;
+    protected ?string $last_updated_at;
 
     public function unitItemType(): string
     {
@@ -33,9 +33,9 @@ class EnterpriseData
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -49,33 +49,33 @@ class EnterpriseData
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getDeleted(): string
+    public function getDeleted(): ?string
     {
         return $this->deleted;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getAddressDisplayType(): string
+    public function getAddressDisplayType(): ?string
     {
         return $this->address_display_type;
     }
 
     /**
-     * @return array
+     * @return array|null
      */
-    public function getUnit(): array
+    public function getUnit(): ?array
     {
         return $this->unit;
     }
@@ -97,9 +97,9 @@ class EnterpriseData
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getLastUpdatedAt(): string
+    public function getLastUpdatedAt(): ?string
     {
         return $this->last_updated_at;
     }
@@ -116,66 +116,66 @@ class EnterpriseData
     }
 
     /**
-     * @param string $title
+     * @param string|null $title
      *
      * @return EnterpriseData
      */
-    public function setTitle(string $title): EnterpriseData
+    public function setTitle(?string $title): EnterpriseData
     {
         $this->title = $title;
         return $this;
     }
 
     /**
-     * @param string $description
+     * @param string|null $description
      *
      * @return EnterpriseData
      */
-    public function setDescription(string $description): EnterpriseData
+    public function setDescription(?string $description): EnterpriseData
     {
         $this->description = $description;
         return $this;
     }
 
     /**
-     * @param string $status
+     * @param string|null $status
      *
      * @return EnterpriseData
      */
-    public function setStatus(string $status): EnterpriseData
+    public function setStatus(?string $status): EnterpriseData
     {
         $this->status = $status;
         return $this;
     }
 
     /**
-     * @param string $deleted
+     * @param string|null $deleted
      *
      * @return EnterpriseData
      */
-    public function setDeleted(string $deleted): EnterpriseData
+    public function setDeleted(?string $deleted): EnterpriseData
     {
         $this->deleted = $deleted;
         return $this;
     }
 
     /**
-     * @param string $address_display_type
+     * @param string|null $address_display_type
      *
      * @return EnterpriseData
      */
-    public function setAddressDisplayType(string $address_display_type): EnterpriseData
+    public function setAddressDisplayType(?string $address_display_type): EnterpriseData
     {
         $this->address_display_type = $address_display_type;
         return $this;
     }
 
     /**
-     * @param array $unit
+     * @param array|null $unit
      *
      * @return EnterpriseData
      */
-    public function setUnit(array $unit): EnterpriseData
+    public function setUnit(?array $unit): EnterpriseData
     {
         $this->unit = $unit;
         return $this;
@@ -204,11 +204,11 @@ class EnterpriseData
     }
 
     /**
-     * @param string $last_updated_at
+     * @param string|null $last_updated_at
      *
      * @return EnterpriseData
      */
-    public function setLastUpdatedAt(string $last_updated_at): EnterpriseData
+    public function setLastUpdatedAt(?string $last_updated_at): EnterpriseData
     {
         $this->last_updated_at = $last_updated_at;
         return $this;
@@ -216,15 +216,15 @@ class EnterpriseData
 
     public static function new(
         int $id,
-        string $title,
+        ?string $title,
         ?string $description,
-        string $status,
-        string $deleted,
-        string $address_display_type,
-        array $unit,
+        ?string $status,
+        ?string $deleted,
+        ?string $address_display_type,
+        ?array $unit,
         Building $building,
         ConstructionCompany $construction_company,
-        string $last_updated_at
+        ?string $last_updated_at
     ): self
     {
         return (new static())

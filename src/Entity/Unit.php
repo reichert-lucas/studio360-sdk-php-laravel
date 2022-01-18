@@ -10,16 +10,16 @@ class Unit
 
     protected int $id;
     protected ?string $title = null;
-    protected string $price;
+    protected ?string $price;
     protected ?int $bathroom;
-    protected string $type;
+    protected ?string $type;
     protected ?int $dorms;
     protected ?int $suites;
     protected ?int $parking_spaces = null;
-    protected string $util_area;
-    protected string $private_area;
-    protected string $total_area;
-    protected string $ground_area;
+    protected ?string $util_area;
+    protected ?string $private_area;
+    protected ?string $total_area;
+    protected ?string $ground_area;
     protected ?string $rental_value = null;
 
     /**
@@ -31,9 +31,9 @@ class Unit
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getGroundArea(): string
+    public function getGroundArea(): ?string
     {
         return $this->ground_area;
     }
@@ -55,9 +55,9 @@ class Unit
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getPrice(): string
+    public function getPrice(): ?string
     {
         return $this->price;
     }
@@ -87,17 +87,17 @@ class Unit
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getPrivateArea(): string
+    public function getPrivateArea(): ?string
     {
         return $this->private_area;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTotalArea(): string
+    public function getTotalArea(): ?string
     {
         return $this->total_area;
     }
@@ -125,11 +125,11 @@ class Unit
     }
 
     /**
-     * @param string $price
+     * @param string|null $price
      *
      * @return Unit
      */
-    public function setPrice(string $price): Unit
+    public function setPrice(?string $price): Unit
     {
         $this->price = $price;
         return $this;
@@ -169,22 +169,22 @@ class Unit
     }
 
     /**
-     * @param string $private_area
+     * @param string|null $private_area
      *
      * @return Unit
      */
-    public function setPrivateArea(string $private_area): Unit
+    public function setPrivateArea(?string $private_area): Unit
     {
         $this->private_area = $private_area;
         return $this;
     }
 
     /**
-     * @param string $total_area
+     * @param string|null $total_area
      *
      * @return Unit
      */
-    public function setTotalArea(string $total_area): Unit
+    public function setTotalArea(?string $total_area): Unit
     {
         $this->total_area = $total_area;
         return $this;
@@ -210,38 +210,38 @@ class Unit
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
 
     /**
-     * @param string $type
+     * @param string|null $type
      *
      * @return Unit
      */
-    public function setType(string $type): Unit
+    public function setType(?string $type): Unit
     {
         $this->type = $type;
         return $this;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getUtilArea(): string
+    public function getUtilArea(): ?string
     {
         return $this->util_area;
     }
 
     /**
-     * @param string $util_area
+     * @param string|null $util_area
      *
      * @return Unit
      */
-    public function setUtilArea(string $util_area): Unit
+    public function setUtilArea(?string $util_area): Unit
     {
         $this->util_area = $util_area;
         return $this;

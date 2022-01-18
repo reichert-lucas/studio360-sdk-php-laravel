@@ -8,10 +8,10 @@ class ConstructionCompany
 {
     use Serializable;
 
-    protected string $title;
-    protected string $whatsapp;
+    protected ?string $title;
+    protected ?string $whatsapp;
     protected ?string $instagram = null;
-    protected array $business_contacts;
+    protected ?array $business_contacts;
     protected ?string $description;
     protected Logo $logo;
 
@@ -21,38 +21,38 @@ class ConstructionCompany
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
     /**
-     * @param string $title
+     * @param string|null $title
      *
      * @return ConstructionCompany
      */
-    public function setTitle(string $title): ConstructionCompany
+    public function setTitle(?string $title): ConstructionCompany
     {
         $this->title = $title;
         return $this;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getWhatsapp(): string
+    public function getWhatsapp(): ?string
     {
         return $this->whatsapp;
     }
 
     /**
-     * @param string $whatsapp
+     * @param string|null $whatsapp
      *
      * @return ConstructionCompany
      */
-    public function setWhatsapp(string $whatsapp): ConstructionCompany
+    public function setWhatsapp(?string $whatsapp): ConstructionCompany
     {
         $this->whatsapp = $whatsapp;
         return $this;
@@ -78,19 +78,19 @@ class ConstructionCompany
     }
 
     /**
-     * @return array
+     * @return array|null
      */
-    public function getBusinessContacts(): array
+    public function getBusinessContacts(): ?array
     {
         return $this->business_contacts;
     }
 
     /**
-     * @param array $business_contacts
+     * @param array|null $business_contacts
      *
      * @return ConstructionCompany
      */
-    public function setBusinessContacts(array $business_contacts): ConstructionCompany
+    public function setBusinessContacts(?array $business_contacts): ConstructionCompany
     {
         $this->business_contacts = $business_contacts;
         return $this;
@@ -116,9 +116,9 @@ class ConstructionCompany
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -137,11 +137,11 @@ class ConstructionCompany
 
 
     public static function new(
-        string $title,
-        string $whatsapp,
+        ?string $title,
+        ?string $whatsapp,
         ?string $instagram,
         ?string $description,
-        array $business_contacts,
+        ?array $business_contacts,
         Logo $logo
     )
     : self {

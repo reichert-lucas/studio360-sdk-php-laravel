@@ -8,48 +8,48 @@ class BusinessContact
 {
     use Serializable;
 
-    protected string $responsible;
-    protected string $phone_number;
+    protected ?string $responsible;
+    protected ?string $phone_number;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getResponsible(): string
+    public function getResponsible(): ?string
     {
         return $this->responsible;
     }
 
     /**
-     * @param string $responsible
+     * @param string|null $responsible
      *
      * @return BusinessContact
      */
-    public function setResponsible(string $responsible): BusinessContact
+    public function setResponsible(?string $responsible): BusinessContact
     {
         $this->responsible = $responsible;
         return $this;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getPhoneNumber(): string
+    public function getPhoneNumber(): ?string
     {
         return $this->phone_number;
     }
 
     /**
-     * @param string $phone_number
+     * @param string|null $phone_number
      *
      * @return BusinessContact
      */
-    public function setPhoneNumber(string $phone_number): BusinessContact
+    public function setPhoneNumber(?string $phone_number): BusinessContact
     {
         $this->phone_number = $phone_number;
         return $this;
     }
 
-    public function new(string $responsible, string $phone_number): self
+    public function new(?string $responsible, ?string $phone_number): self
     {
         return (new static())
             ->setResponsible($responsible)

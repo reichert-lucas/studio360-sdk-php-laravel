@@ -8,28 +8,28 @@ class Video
 {
     use Serializable;
 
-    protected string $link;
+    protected ?string $link;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getLink(): string
+    public function getLink(): ?string
     {
         return $this->link;
     }
 
     /**
-     * @param string $link
+     * @param string|null $link
      *
      * @return Video
      */
-    public function setLink(string $link): Video
+    public function setLink(?string $link): Video
     {
         $this->link = $link;
         return $this;
     }
 
-    public static function new(string $link):self
+    public static function new(?string $link):self
     {
         return (new static())
             ->setLink($link);

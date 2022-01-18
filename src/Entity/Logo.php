@@ -8,28 +8,28 @@ class Logo
 {
     use Serializable;
 
-    protected string $url;
+    protected ?string $url;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->url;
     }
 
     /**
-     * @param string $url
+     * @param string|null $url
      *
      * @return Logo
      */
-    public function setUrl(string $url): Logo
+    public function setUrl(?string $url): Logo
     {
         $this->url = $url;
         return $this;
     }
 
-    public static function new(string $url):self
+    public static function new(?string $url):self
     {
         return (new static())
             ->setUrl($url);

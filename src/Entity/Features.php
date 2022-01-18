@@ -8,50 +8,50 @@ class Features
 {
     use Serializable;
 
-    protected string $type;
+    protected ?string $type;
 
-    /** @var string[]|array $tags */
-    protected array $tags;
+    /** @var string[]|array|null $tags */
+    protected ?array $tags;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
 
     /**
-     * @param string $type
+     * @param string|null $type
      *
      * @return Features
      */
-    public function setType(string $type): Features
+    public function setType(?string $type): Features
     {
         $this->type = $type;
         return $this;
     }
 
     /**
-     * @return array
+     * @return array|null
      */
-    public function getTags(): array
+    public function getTags(): ?array
     {
         return $this->tags;
     }
 
     /**
-     * @param array $tags
+     * @param array|null $tags
      *
      * @return Features
      */
-    public function setTags(array $tags): Features
+    public function setTags(?array $tags): Features
     {
         $this->tags = $tags;
         return $this;
     }
 
-    public function new(string $type, array $tags): self
+    public function new(?string $type, ?array $tags): self
     {
         return (new static())
             ->setType($type)
