@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v2.3.0...v2.4.0) (2022-01-18)
+
+
+### Features
+
+* add null as expected value to some items from payload ([912b82c](https://github.com/jetimob/studio360-sdk-php-laravel/commit/912b82ca81cc8b2fd93b6cd6c5cc0c86c533e7d1))
+
 ## [2.3.0](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v2.2.0...v2.3.0) (2021-12-17)
 
 
