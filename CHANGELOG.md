@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.4.1](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v2.4.0...v2.4.1) (2022-01-31)
+
+
+### Bug Fixes
+
+* set initial values for ConstructionCompany entity attributes ([4de2044](https://github.com/jetimob/studio360-sdk-php-laravel/commit/4de2044fd1f504eba139e95b6038f5f3ee20dffe))
+
 ## [2.4.0](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v2.3.0...v2.4.0) (2022-01-18)
 
 
