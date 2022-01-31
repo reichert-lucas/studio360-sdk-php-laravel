@@ -8,11 +8,11 @@ class ConstructionCompany
 {
     use Serializable;
 
-    protected ?string $title;
-    protected ?string $whatsapp;
+    protected ?string $title = null;
+    protected ?string $whatsapp = null;
     protected ?string $instagram = null;
-    protected ?array $business_contacts;
-    protected ?string $description;
+    protected ?array $business_contacts = null;
+    protected ?string $description = null;
     protected Logo $logo;
 
     public function business_contactsItemType(): string
