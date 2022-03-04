@@ -21,6 +21,23 @@ class Unit
     protected ?string $total_area;
     protected ?string $ground_area;
     protected ?string $rental_value = null;
+    protected ?string $deleted;
+
+    /**
+     * @return string|null
+     */
+    public function getDeleted(): ?string
+    {
+        return $this->deleted;
+    }
+
+    /**
+     * @param string|null $deleted
+     */
+    public function setDeleted(?string $deleted): void
+    {
+        $this->deleted = $deleted;
+    }
 
     /**
      * @return string|null
