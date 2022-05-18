@@ -33,7 +33,7 @@ class Building
         return Video::class;
     }
 
-    public function tour_360ItemType(): string
+    public function tour360ItemType(): string
     {
         return Video::class;
     }

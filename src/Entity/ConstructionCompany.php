@@ -15,7 +15,7 @@ class ConstructionCompany
     protected ?string $description = null;
     protected Logo $logo;
 
-    public function business_contactsItemType(): string
+    public function businessContactsItemType(): string
     {
         return BusinessContact::class;
     }
