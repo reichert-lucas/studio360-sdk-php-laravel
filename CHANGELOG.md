@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.5.2](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v2.5.1...v2.5.2) (2022-05-18)
+
+
+### Bug Fixes
+
+* convert function name to camelCase ([f9c9660](https://github.com/jetimob/studio360-sdk-php-laravel/commit/f9c96607ae6fc8df364e6c0a391f11ca9115c0fb))
+
 ### [2.5.1](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v2.5.0...v2.5.1) (2022-04-14)
 
 ## [2.5.0](https://github.com/jetimob/studio360-sdk-php-laravel/compare/v2.4.1...v2.5.0) (2022-03-04)
