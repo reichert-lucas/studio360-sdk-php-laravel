@@ -20,7 +20,7 @@ class Building
     protected ?string $rental_value;
     protected Address $address;
     protected ?string $text_address;
-    protected ?array $cover;
+    protected Cover $cover;
     protected Features $features;
 
     public function galleryItemType(): string
@@ -172,11 +172,11 @@ class Building
     }
 
     /**
-     * @return array|null
+     * @return Cover|null
      */
-    public function getCover(): ?array
+    public function getCover(): ?Cover
     {
-        return $this->cover;
+        return $this->cover ?? null;
     }
 
     /**
